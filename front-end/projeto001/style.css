@@ -91,6 +91,9 @@ nav{
     text-align: center;
     background-color: #484d55;
     padding: 10px;
+    position: sticky;
+    top: 80x;
+    z-index: 999;
 }
 :any-link{
     color: white;
