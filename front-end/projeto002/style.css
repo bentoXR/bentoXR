@@ -59,7 +59,7 @@ a{text-decoration: none;}
     font-size: 18px;
     text-transform: uppercase; /* Deixa o texto em maiúsculas */
 }
-/* 4. Estilizando a Seção de Cards (Destaques) */
+/* 4. Estilizando a Seção de Cards (Destaques) - NOVO ESTILO */
 
 .container-cards {
     display: flex; /* Alinha os cards em uma linha */
@@ -68,30 +68,106 @@ a{text-decoration: none;}
     padding: 50px 20px; /* Espaço em cima e embaixo da seção */
 }
 
-/* Estilo de cada Card (o quadrado principal) */
+/* Estilo de cada Card (agora é o link completo) */
 .card {
-    width: 250px; /* Largura para ser quadrado */
-    height: 250px; /* Altura para ser quadrado */
-    border-radius: 8px; /* Borda arredondada */
-    background-color: #DDEBFD; /* Fundo azul claro do mockup */
-    overflow: hidden; /* Garante que a imagem se ajuste ao quadrado */
+    width: 250px; 
+    height: 320px; /* Aumenta a altura para acomodar o nome */
+    border-radius: 8px; 
+    background-color: #DDEBFD; 
+    overflow: hidden; 
+    /* Configura o link para se comportar como um bloco vertical */
+    display: flex;
+    flex-direction: column; /* Organiza a imagem e o nome verticalmente */
+    text-align: center;
+    color: #333; /* Cor padrão do texto */
+    
+    /* Efeitos para ficar "mais legal": Sombra e Transição */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15); /* Sombra inicial */
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Transição suave para o hover */
+}
+
+/* Efeito Hover de elevação */
+.card:hover {
+    transform: translateY(-5px); /* Move o card 5px para cima */
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.3); /* Sombra mais forte no hover */
 }
 
 /* Estilo para a div que envolve a imagem */
 .imagem-placeholder {
     width: 100%; 
-    height: 100%; 
+    height: 250px; /* Altura fixa para a imagem */
 }
 
-/* Estilo da Imagem: Faz ela preencher a div e o card */
+/* Estilo da Imagem: Faz ela preencher a div */
 .imagem-placeholder img {
     width: 100%;
     height: 100%;
-    /* object-fit: cover garante que a imagem preencha 
-       o quadrado sem ser distorcida (mas pode cortar as bordas) */
+    /* object-fit: cover garante que a imagem preencha */
     object-fit: cover; 
-    border-radius: 8px;
+    border-radius: 8px 8px 0 0; /* Arredonda só o topo da imagem */
     display: block; 
+}
+
+/* Estilo do nome do mercado (Novo elemento) */
+.nome-mercado {
+    font-size: 18px;
+    font-weight: bold;
+    color: #4A6EE2; /* Cor azul primária do site */
+    margin: 10px 0 0 0; /* Espaço entre a imagem e o nome */
+    padding: 0 10px;
+}
+
+/* 5. Estilizando o Conteúdo Principal (deve ter sido adicionado na rodada anterior) */
+
+.galeria-mercado {
+    display: flex; 
+    flex-wrap: wrap; 
+    gap: 20px; 
+    justify-content: center; 
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.galeria-mercado img {
+    max-width: 450px; 
+    width: 100%; 
+    height: auto; 
+    border-radius: 8px; 
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
+}
+
+/* Estilo para o conteúdo principal */
+main {
+    max-width: 1100px; 
+    margin: 0 auto; 
+    padding: 20px;
+}
+
+/* Estilos de título */
+main h2, main h3 {
+    color: #4A6EE2; 
+    border-bottom: 2px solid #FF5757; 
+    padding-bottom: 5px;
+    margin-top: 30px;
+}
+
+main p {
+    line-height: 1.6; 
+}
+
+hr {
+    border: 0;
+    height: 1px;
+    background-color: #ccc;
+    margin: 40px 0;
+}
+
+footer {
+    text-align: center;
+    padding: 20px 0;
+    background-color: #333;
+    color: white;
+    margin-top: 40px;
 }
 /* 5. Estilizando a Galeria de Mercados */
 .galeria-mercado {
