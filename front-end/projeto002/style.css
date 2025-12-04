@@ -1,0 +1,95 @@
+body{
+    margin: 0;
+    padding: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #f0f0f0;
+}
+
+header{
+    width: 100%;
+}
+
+a{text-decoration: none;}
+
+/* 2. Estilizando o Topo Vermelho */
+.topo-vermelho {
+    background-color: #FF5757; /* Um tom de vermelho forte */
+    color: white; /* Cor do texto (para o subtítulo) */
+    text-align: center;
+    padding: 20px 0; /* Espaçamento interno em cima e embaixo */
+}
+
+/* Estilizando o título principal (desu) */
+.topo-vermelho h1 {
+    font-size: 80px; /* Tamanho grande para o nome */
+    color: black; /* Cor do texto em preto (como no mockup) */
+    margin: 0;
+    line-height: 1; /* Para centralizar bem */
+}
+
+/* Estilizando o subtítulo (Um site para mercados) */
+.topo-vermelho p {
+    font-size: 16px;
+    margin-top: 5px;
+}
+
+/* 3. Estilizando a Barra de Navegação Azul */
+.barra-azul {
+    background-color: #4A6EE2; /* Um tom de azul vívido */
+}
+
+/* Estiliza a lista de links (ul) */
+.barra-azul ul {
+    list-style: none; /* Remove os marcadores de lista */
+    margin: 0;
+    padding: 0;
+    display: flex; /* Alinha os itens na horizontal */
+    justify-content: center; /* Centraliza os itens no meio da barra */
+}
+
+/* Estiliza cada item da lista (li) */
+.barra-azul li {
+    padding: 15px 25px; /* Espaçamento interno para os botões */
+}
+
+/* Estiliza os links em si (a) */
+.barra-azul a {
+    color: white; /* Cor do texto em branco */
+    font-weight: bold;
+    font-size: 18px;
+    text-transform: uppercase; /* Deixa o texto em maiúsculas */
+}
+/* 4. Estilizando a Seção de Cards (Destaques) */
+
+.container-cards {
+    display: flex; /* Alinha os cards em uma linha */
+    justify-content: center; /* Centraliza o grupo de cards na página */
+    gap: 30px; /* Espaço entre os cards */
+    padding: 50px 20px; /* Espaço em cima e embaixo da seção */
+}
+
+/* Estilo de cada Card (o quadrado principal) */
+.card {
+    width: 250px; /* Largura para ser quadrado */
+    height: 250px; /* Altura para ser quadrado */
+    border-radius: 8px; /* Borda arredondada */
+    background-color: #DDEBFD; /* Fundo azul claro do mockup */
+    overflow: hidden; /* Garante que a imagem se ajuste ao quadrado */
+}
+
+/* Estilo para a div que envolve a imagem */
+.imagem-placeholder {
+    width: 100%; 
+    height: 100%; 
+}
+
+/* Estilo da Imagem: Faz ela preencher a div e o card */
+.imagem-placeholder img {
+    width: 100%;
+    height: 100%;
+    /* object-fit: cover garante que a imagem preencha 
+       o quadrado sem ser distorcida (mas pode cortar as bordas) */
+    object-fit: cover; 
+    border-radius: 8px;
+    display: block; 
+}
