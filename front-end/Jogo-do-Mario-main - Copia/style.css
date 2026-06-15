@@ -1,0 +1,126 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+}
+
+.tabuleiro-jogo {
+    width: 100%;
+    height: 100%;
+    margin: 0 auto;
+    position: relative;
+    overflow: hidden;
+    background-image: url('assets/imgs/plano-de-fundo.png');
+    background-size: cover;
+    background-position: bottom center;
+    background-repeat: no-repeat;
+}
+
+.espinho {
+    position: absolute;
+    bottom: 210px;
+    width: 74px;
+    animation: espinho-animations 1.5s infinite linear;
+}
+
+.sonic {
+    width: 104px;
+    position: absolute;
+    bottom: 210px;
+}
+
+.pulo {
+    animation: animacao-sonic 500ms ease-out;
+}
+
+.passaro {
+    width: 500px;
+    position: absolute;
+    animation: animacao-passaro 20s infinite linear;
+}
+
+.fim-de-jogo {
+    visibility: hidden;
+    display: flex;
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(65, 57, 57, 0.363)
+}
+
+.reiniciar {
+    height: 60px;
+    width: 350px;
+    border-radius: 10px;
+    border: none;
+    font-size: 20px;
+    background-color: blue;
+    cursor: pointer;
+}
+
+@keyframes espinho-animations {
+    from {
+        right: -80px;
+    }
+
+    to {
+        right: 100%;
+    }
+}
+
+@keyframes animacao-sonic {
+    0% {
+        bottom: 210px;
+    }
+
+    40% {
+        bottom: 330px
+    }
+
+    50% {
+        bottom: 330px;
+    }
+
+    60% {
+        bottom: 330px
+    }
+
+    100% {
+        bottom: 210px
+    }
+}
+
+@keyframes animacao-passaro {
+    from {
+        right: -550px;
+    }
+
+    to {
+        right: 100%
+    }
+}
+
+@media (max-width: 620px) {
+    .sonic {
+        width: 88px;
+        position: absolute;
+        bottom: 210px;
+    }
+
+    .espinho {
+        position: absolute;
+        bottom: 210px;
+        width: 62px;
+        animation: espinho-animations 1s infinite linear;
+    }
+}
